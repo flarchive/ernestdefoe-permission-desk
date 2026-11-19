@@ -1,0 +1,82 @@
+{
+    "name": "ernestdefoe/permission-desk",
+    "description": "Permission Desk: a group-first replacement for Flarum's admin Permissions page. See and edit what each group can do in plain words, check what one member can do and why, compare and copy groups, apply presets, review every change before saving, and undo it from the history.",
+    "keywords": [
+        "flarum",
+        "flarum-extension",
+        "permissions",
+        "groups",
+        "admin"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ernest Defoe",
+            "email": "ernestdefoe@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0"
+    },
+    "suggest": {
+        "flarum/tags": "Permissions per restricted tag, shown and edited per tag",
+        "flarum/audit": "Every permission change also lands in Flarum's audit log",
+        "flarum/suspend": "Suspended members are shown as treated like guests",
+        "ernestdefoe/member-desk": "A Permissions button on each member's page"
+    },
+    "autoload": {
+        "psr-4": {
+            "ErnestDefoe\\PermissionDesk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ErnestDefoe\\PermissionDesk\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Permission Desk",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-key",
+                "backgroundColor": "#4d698e",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+                "flarum/tags",
+                "flarum/audit",
+                "flarum/suspend",
+                "ernestdefoe/member-desk"
+            ]
+        }
+    },
+    "require-dev": {
+        "flarum/audit": "^2.0",
+        "flarum/phpstan": "^2.0",
+        "flarum/suspend": "^2.0",
+        "flarum/tags": "^2.0",
+        "flarum/testing": "^2.0"
+    },
+    "scripts": {
+        "test": [
+            "@test:integration"
+        ],
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php",
+        "analyse:phpstan": "phpstan analyse"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once.",
+        "analyse:phpstan": "Run static analysis"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
+}

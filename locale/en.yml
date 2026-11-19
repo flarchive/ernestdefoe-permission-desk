@@ -1,0 +1,333 @@
+ernestdefoe-permission-desk:
+  admin:
+    page:
+      title: Permissions
+      description: What each group can do, in plain words. Every change is reviewed before it's saved, and can be undone from History.
+
+    tab:
+      groups: Groups
+      permissions: Permissions
+      tags: Tags
+      member: Check a member
+      history: History
+
+    classic: Classic grid
+    classic_help: Flarum's original permissions grid, unchanged
+    back_to_desk: "← Back to Permission Desk"
+    member_desk_button: Permissions
+    ext_core: Flarum core
+    error: Something went wrong. Nothing was saved.
+
+    groups: Groups
+    guests_everyone: Guests (everyone)
+    guests_help: Everyone who visits, signed in or not.
+    members_help: Every member whose email is confirmed.
+    admins_help: Admins can do everything.
+    group_help: Plus everything Members and Everyone can do.
+    admins_note: Admins pass every permission check in Flarum, so there is nothing to switch here. Every row is shown on and locked.
+    new_group: New group
+    edit_group: Edit group
+    compare: Compare with…
+    search_placeholder: "Search permissions (e.g. delete, poll, ip)"
+    search_label: Search permissions
+    no_match: "No permissions match \"{q}\"."
+    allowed_of: "{on} of {total} allowed"
+    via: "via {group}"
+    also_via: "also via {group}"
+    admins_always: Admins can always do this
+    members_only: Members only
+    differs: differs from global
+    differs_in: "Different in {count, plural, one {# tag} other {# tags}}."
+    unsaved: unsaved
+    risky: Risky
+    sensitive: Sensitive
+    permission: Permission
+    cancel: Cancel
+    stage: "Stage {count, plural, one {# change} other {# changes}}"
+    staged: "Staged {count, plural, one {# change} other {# changes}}. Review before saving."
+    and_more: ", and {count} more"
+
+    picker:
+      search: Find a tag…
+      none: No tags match.
+      more: "{count} more: keep typing to narrow the list."
+
+    area:
+      view: Viewing
+      start: Posting
+      reply: Replying
+      moderate: Moderation
+
+    by:
+      label: Group rows by
+      area: By area
+      ext: By extension
+
+    scope:
+      label: Where
+      global: Everywhere
+      in_tag: "In tag: {tag}"
+      note: "{tag} is a restricted tag: inside it, only these settings count, not the global ones."
+
+    hint:
+      needs: "Also needs: {what}, or this does nothing."
+      turn_on: "Turn {count, plural, one {it} other {them}} on too"
+      view_off: "{count, plural, one {# other permission} other {# other permissions}} now do nothing for this group, because they need View discussions."
+      inherited: This group still gets it through Everyone or Members. To take it away, change it for that group.
+
+    tags:
+      title: "Restricted tags for {group}"
+      summary_group: "{group} can see {view} of {total, plural, one {# restricted tag} other {# restricted tags}}, start discussions in {start} and reply in {reply}."
+      summary_admin: "Admins can do everything in all {total, plural, one {# restricted tag} other {# restricted tags}}."
+      summary_none: "No tag is restricted, so these permissions apply in every tag. Restrict a tag to give it its own."
+      open_tab: Open the Tags tab
+      for: Show for
+      search: "Find a tag (name, or Parent › Child)"
+      filter:
+        all: All tags
+        restricted: Restricted
+        open: Not restricted
+        hidden: "{group} can't see"
+        custom: Different from Everywhere
+        selected: "Selected ({count})"
+      summary: "{total, plural, one {# tag} other {# tags}}, {restricted} restricted. {group} can see {see} of the restricted ones."
+      tag: Tag
+      view: View
+      start: Start
+      reply: Reply
+      moderate: Moderate
+      of: "{on} of {total}"
+      edit: Edit
+      none: No tags match.
+      more: "Show more ({count} left)"
+      select_shown: Select every tag shown
+      select: "Select {tag}"
+      expand: "Show the tags inside {tag}"
+      collapse: "Hide the tags inside {tag}"
+      restricted: "Restricted: only its own permissions count inside it"
+      parent_hidden: parent hidden
+      parent_hidden_help: "This group can't see {parent}, and Flarum hides a child tag from anyone who can't see its parent."
+      open_note: "Not restricted: uses Everywhere's permissions"
+      open_short: Not restricted
+      collapse_all: Collapse all
+      expand_all: Expand all
+      restrict_one: Restrict
+      cell: "{what} in {tag}"
+      bulk_label: Change the selected tags
+      selected: "{count, plural, one {# tag selected} other {# tags selected}}"
+      clear_selection: Clear selection
+      action: Allow or remove
+      allow: "Allow {group} to"
+      remove: "Take away from {group}"
+      what: Which permissions
+      what_viewForum: view discussions
+      what_startDiscussion: start discussions
+      what_discussion_reply: reply
+      what_post: view, start and reply
+      what_moderate: "everyday moderation (risky ones only when taking away)"
+      what_all: "everything (risky ones only when taking away)"
+      apply: "Stage for {count, plural, one {# tag} other {# tags}}"
+      copy_from: Copy every permission from
+      copy_to: "Copy to {count, plural, one {# tag} other {# tags}}"
+      restrict_many: "Restrict {count, plural, one {# tag} other {# tags}}"
+      unrestrict_many: "Unrestrict {count, plural, one {# tag} other {# tags}}"
+      remove_note: Taking a permission away from a group doesn't affect members who still get it through Everyone or Members.
+      nothing: Nothing to change. The selected tags already match.
+      restrict_confirm: "Restrict {count, plural, one {this tag} other {these # tags}}? Each one starts with a copy of Everywhere's permissions (saved now and logged in History), so nothing changes for anyone until you edit them."
+      restrict_note: "Restricted {tags}{count, plural, one {} =2 {} =3 {} other {, and more}}: copied Everywhere's permissions"
+      restricted_done: "Restricted {count, plural, one {# tag} other {# tags}}. Their permissions match Everywhere until you change them."
+      unrestrict_confirm: "Unrestrict {count, plural, one {this tag} other {these # tags}}? Their own permissions stop counting and Everywhere's apply in them again. Their own permissions are kept in case you restrict them again."
+      unrestricted_done: "Unrestricted {count, plural, one {# tag} other {# tags}}."
+      same_in: "Same as Everywhere in {count, plural, one {# other restricted tag} other {# other restricted tags}}."
+      change_in: Change it in another tag…
+      match_all: "Make {count, plural, one {# tag} other {all # tags}} match Everywhere"
+
+    settings:
+      title: Forum-wide settings
+      help: not per group, saved as soon as you change them
+
+    compare_back: "Back to {group}"
+    compare_a: First group
+    compare_b: Second group
+    vs: vs
+    only_diff: Only differences
+    match: "Make {b} match {a}"
+    differences: "{count, plural, one {# difference} other {# differences}} between {a} and {b}, everywhere and in {tags, plural, one {# restricted tag} other {# restricted tags}}."
+    no_differences: No differences.
+    differences_short: "{count, plural, one {# difference} other {# differences}}"
+
+    filter:
+      label: Show
+      all: All
+      guests: Everyone can
+      one: Only one group
+      none: Admins only
+      danger: Danger flags
+      other: Not registered
+
+    other:
+      title: "Stored, but no enabled extension registers it"
+      help: Probably left by an extension that was removed or switched off. Clearing it is safe if that extension is gone for good.
+      clear: Clear
+      none: Nothing left behind by other extensions.
+
+    flag:
+      guests: Anyone, signed in or not, could do this
+      members: Every member could do this
+      members_only: Your forum becomes members-only
+      admins_only: Only admins will be able to do this
+      risky: "{what}"
+      sensitive: "Sensitive: {what}"
+
+    copy:
+      button: Copy…
+      title: Copy permissions
+      from: From
+      to: to
+      replace: Replace
+      replace_help: "{to} ends up with exactly what {from} has."
+      add: Add only
+      add_help: "Grant {to} anything {from} has; take nothing away."
+      tags: "Include restricted tags ({count, plural, one {# tag} other {# tags}})"
+      count: "{count, plural, =0 {Nothing to change: they already match.} one {# change will be staged. You'll see it in the review before anything is saved.} other {# changes will be staged. You'll see each one in the review before anything is saved.}}"
+
+    preset:
+      button: Apply preset…
+      title: "Apply a preset to {group}"
+      readonly: Read only
+      readonly_help: Can read and search; can't post, reply or like.
+      member: Member (Flarum's default)
+      member_help: Start discussions, reply, like, flag and vote.
+      trusted: Trusted member
+      trusted_help: Member, plus uploads, polls, access tokens and no flood limit.
+      mod: Moderator
+      mod_help: Everyday moderation; nothing that deletes forever or changes sign-ins, groups or tokens.
+      tagmod: Tag moderator
+      tagmod_help: Everyday moderation inside every restricted tag only; nothing global changes.
+      own_help: "Saved preset · {count, plural, one {# permission} other {# permissions}}"
+      count: "{add} to grant, {remove} to remove. Permissions of extensions that aren't installed are skipped."
+      save: "Save {group} as a preset"
+      save_label: Preset name
+      save_placeholder: "Name, e.g. {group} (2026)"
+      delete: Delete this preset
+
+    savebar:
+      count: "{count, plural, one {# unsaved change} other {# unsaved changes}}"
+      discard: Discard
+      review: Review & save
+
+    review:
+      title: "Review {count, plural, one {# change} other {# changes}}"
+      count: "{count, plural, one {# change} other {# changes}}"
+      can: "Can {what}"
+      cannot: "Can no longer {what}"
+      needs: "Won't take effect until they also have: {what}"
+      in_tags: "in {count} tags"
+      skipped: "Skipped because they changed again since: {what}"
+      note: Note for History (optional)
+      note_placeholder: e.g. Let Support Team moderate in Support
+      ack: I understand the risky changes above
+      ack_help: Red flags need a tick before saving.
+      via_core: "Saved through Flarum's own permission handler."
+      keep_editing: Keep editing
+      save: "Save {count, plural, one {# change} other {# changes}}"
+      saved: "Saved {count, plural, one {# change} other {# changes}}."
+      conflict: "Someone changed {what} since you opened this page. The review now shows what's there now; check it and save again."
+
+    member:
+      search: "Find a member: name, username or email"
+      no_results: No members match.
+      not_found: That member no longer exists.
+      pick: Find a member to see what they can do, and why.
+      admin: "Admin: can do everything"
+      needs: "Needs \"{what}\" first"
+      unconfirmed: "Email not confirmed: treated as a guest"
+      suspended: "Suspended until {date}: treated as a guest"
+      only_admins: Only Admins
+      not_in: "Not in {groups}"
+      verified: Email verified
+      not_verified: Email not confirmed
+      suspended_until: "Suspended until {date}"
+      no_groups: No extra groups
+      from: "Permissions come from: {groups}"
+      guest_only: (only Everyone, see why below)
+      open_desk: Open in Member Desk
+      allowed: Allowed
+      not_allowed: Not allowed
+      staged_note: Unsaved changes are counted here, so you can see what they would do before saving.
+      sum_admin: "{name} is an admin and can do everything, everywhere."
+      sum_unconfirmed: "{name} hasn't confirmed their email, so Flarum treats them as a guest: they can read what guests can, but can't post, reply or like until they confirm."
+      sum_suspended: "{name} is suspended until {date}, so Flarum treats them as a guest until then."
+      sum: "{name} can read {has_hidden, select, 1 {everywhere except {hidden}} other {everywhere}}{start, select, 1 { and start discussions} other {}}. {mods, plural, =0 {No moderation permissions.} one {Has # moderation permission.} other {Has # moderation permissions.}}"
+      sum_tag_hidden: "{name} can't see {tag} at all: it's a restricted tag and none of their groups is allowed in."
+      sum_tag: "In {tag}, {name} can read{start, select, 1 {, start discussions} other {}}{reply, select, 1 { and reply} other {, but can't reply}}. {mods, plural, =0 {No moderation permissions here.} one {Has # moderation permission here.} other {Has # moderation permissions here.}}"
+      limit: "This is what {name}'s groups allow. Other extensions can add their own rules (a locked discussion, Trust Levels' new-member limits, a post-count gate), so a ✓ here is needed but not always enough."
+
+    history:
+      filter: Filter by permission or note
+      help: "Every save is one entry. Undo reverses one entry; Restore to here puts every permission back the way it was right after that entry. Both open the review first. Changes made elsewhere (the classic grid, an extension, a command) are logged too."
+      empty: No changes yet.
+      more: Load more
+      outside: Outside Permission Desk
+      outside_help: Found by the outside-change check, e.g. the classic grid, an extension's install or a direct database edit.
+      changes: "{count, plural, one {# change} other {# changes}}"
+      in: "in {tag}"
+      kind_outside: outside
+      kind_undo: "undo of #{id}"
+      kind_restore: restore
+      undone: undone
+      undo: Undo
+      restore: Restore to here
+      undo_note: "Undo of #{id}"
+      restore_note: "Restore to #{id}"
+      nothing_to_undo: "Nothing to undo: {what} changed again since."
+      already: Already matches that point.
+
+    desc:
+      viewForum: Can open the forum and read discussions.
+      viewHiddenGroups: Can see groups marked hidden, and who is in them.
+      searchUsers: Can search for members by name.
+      user_viewLastSeenAt: "Can see when members were last online, even when a member hides it."
+      startDiscussion: Can start new discussions.
+      createAccessToken: Can make API tokens for their own account.
+      user_editAvatar: Can upload or change their own avatar.
+      discussion_reply: Can post replies.
+      discussion_viewIpsPosts: Can see the IP address each post was made from.
+      discussion_rename: "Can change any discussion's title."
+      discussion_hide: Can hide discussions. They can be restored.
+      discussion_delete: "Can permanently delete discussions. They can't be restored."
+      postWithoutThrottle: Skips the flood limit between posts.
+      discussion_editPosts: "Can edit anyone's posts."
+      discussion_hidePosts: "Can hide anyone's posts. They can be restored."
+      discussion_deletePosts: "Can permanently delete anyone's posts. They can't be restored."
+      user_editCredentials: "Can change anyone's email and password."
+      user_editGroups: Can add people to groups, including their own group.
+      user_edit: "Can change members' names and profile details."
+      moderateAccessTokens: "Can see and revoke anyone's API tokens."
+      discussion_tag: Can move any discussion to other tags.
+      discussion_lock: Can stop replies to a discussion.
+      discussion_sticky: Can pin a discussion to the top.
+      discussion_likePosts: "Can like other members' posts."
+      discussion_flagPosts: Can report posts to moderators.
+      discussion_viewFlags: Sees reported posts and can dismiss reports.
+      discussion_approvePosts: Can approve posts held for review.
+      discussion_replyWithoutApproval: "Replies don't wait for approval."
+      discussion_startWithoutApproval: "Discussions don't wait for approval."
+      user_suspend: Can suspend members for a time or forever.
+      discussion_hideOwnPosts: Can hide their own posts.
+      startConversation: Can start private conversations.
+      mentionGroups: Can mention whole groups.
+      ernestdefoe_member_desk_view: Can open Member Desk (emails masked).
+      ernestdefoe_member_desk_viewEmails: "Sees members' email addresses in Member Desk."
+      ernestdefoe_member_desk_viewIps: Sees IP addresses and other accounts on the same IP.
+      ernestdefoe_member_desk_markSpammer: "Can mark spammers: suspend, hide their content and ban their IPs."
+      ernestdefoe_member_desk_export: Can export members as CSV, emails included.
+
+  # Errors the API returns (shown to the admin as a validation alert).
+  api:
+    nothing_to_save: Nothing to save.
+    not_a_permission: That isn't a permission name.
+    no_such_group: "There is no group {id}."
+    not_undoable: That entry can no longer be undone.
+    no_such_entry: That History entry doesn't exist.
+    already_undone: That entry has already been undone.
